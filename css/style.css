@@ -1,0 +1,151 @@
+*,::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: sahel;
+    src: url(../font/Sahel.ttf);
+}
+body {
+    font-family: sahel;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+/* /////// */
+.container {
+    width: 25rem;
+    height: auto;
+    background-color: rgba(247, 247, 247, .6);
+    border-radius: 5px;
+}
+.box {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+}
+h1 {
+    margin-bottom: 10px;
+    user-select: none;
+}
+.input {
+    display: flex;
+    user-select: none;
+}
+.input input {
+    width: 90%;
+    height: 2.6rem;
+    border-radius: 5px;
+    border: 1px solid silver;
+    text-indent: 15px;
+    font-size: 18px;
+    font-family: sahel;
+}
+.input input:focus {
+    outline: 0;
+}
+.input span {
+    display: block;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    background-color: #991db8;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.input span:active {
+    transform: scale(.88);
+}
+.works {
+    width: 100%;
+    height: auto;
+    background-color: rgba(241, 241, 241, .6);
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.task {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    cursor: alias;
+}
+.taskCompleted {
+    text-decoration: line-through;
+    opacity: .6;
+}
+.del {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(252, 68, 68);
+    color: #fff;
+    position: absolute;
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    left: -50px;
+    top: 50%;
+    transform: translate(0 , -50%);
+    transform-origin: left;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.del:hover {
+    background-color: rgb(46, 46, 46);
+}
+.task:hover .del {
+    left: 0;
+}
+.footer {
+    height: 2.5rem;
+    background-color: rgba(241, 241, 241, .6);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+.footer p {
+    padding-right: 10px;
+}
+.clear-all {
+    background-color: #991db8;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    opacity: .6;
+    user-select: none;
+}
+.clear-all:active {
+    transform: scale(.88);
+}
+.count-work {
+    color: #991db8;
+}
+.err {
+    width: 100%;
+    font-size: 15px;
+    color: red;
+    text-align: center;
+}
